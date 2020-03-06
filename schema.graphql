@@ -1,0 +1,21 @@
+type Message {
+    user: String!
+    text: String!
+}
+
+type Query {
+    getMessage: String!
+}
+
+input PostMessage {
+    user: String!
+    text: String!
+}
+
+type Mutation {
+    sendMessage(input: PostMessage!): Message! 
+}
+
+type Subscription { 
+    newMessage: Message!
+}
