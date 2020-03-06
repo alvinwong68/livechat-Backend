@@ -28,5 +28,6 @@ const httpServer = createServer(app);
 server.installSubscriptionHandlers(httpServer);
 
 httpServer.listen(port, ()=> {
-    console.log('listening to port 3000');
+    console.log(`graphql server running at ${server.graphqlPath}`);
+    console.log('listening to port', port);
 });
